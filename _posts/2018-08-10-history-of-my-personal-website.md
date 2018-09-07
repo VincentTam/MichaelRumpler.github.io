@@ -1,6 +1,7 @@
 ---
 title: The History of my Personal Website
 date: 2018-08-10
+classes: wide
 ---
 
 I started my first website around 2000. Back then clouds were something in the sky and I was a sysadmin and liked to play with servers

@@ -1,5 +1,5 @@
 docker run -it --rm -p 5000:4000 -v D:\MichaelRumpler.github.io:/usr/src/app starefossen/github-pages
-
+pause
 
 REM to see the running docker containers (dockerId is in the first column):
 REM		docker ps

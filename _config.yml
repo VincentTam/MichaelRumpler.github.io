@@ -15,14 +15,14 @@
 minimal_mistakes_skin    : "contrast" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
-locale                   : "de-AT"
-title                    : Michael Rumpler
+locale                   : "en-US"
+title                    : "Michaels Blog"
 title_separator          : "-"
 name                     : "Michael Rumpler"
 description              : "A fullstack software developer"
 url                      : "https://www.mrumpler.at"
 baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               : "MichaelRumpler/michaelrumpler.github.io"
+repository               : "MichaelRumpler/MichaelRumpler.github.io"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
@@ -103,7 +103,7 @@ author:
   name             : "Michael Rumpler"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "software developer"
-  location         : "Austria"
+  location         : "Leobersdorf, Austria"
   email            :
   uri              :
   home             : # null (default), "absolute or relative url to link to author home"
@@ -258,6 +258,8 @@ compress_html:
 
 # Defaults
 defaults:
+  header:
+    image: /assets/images/keyboard.jpg
   # _posts
   - scope:
       path: ""
@@ -265,7 +267,15 @@ defaults:
     values:
       layout: single
       author_profile: true
-      read_time: true
-      comments: # true
+      read_time: #true
+      comments: true
       share: true
-      related: true
+      related: #true
+  # _pages
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+      classes: wide
