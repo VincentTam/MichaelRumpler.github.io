@@ -3,14 +3,15 @@ title: About me
 permalink: /about/
 ---
 
-Hi, my name is Michael and I'm a software developer.
+Hi, I'm Michael and I'm a software developer.
 
-But more important is, that I'm married and I live with my wife and cat in a small town south of Vienna, Austria.
+I live with my wife and cat in a small town south of Vienna, Austria.
 I love to play Squash and Badminton, travelling and hiking.
+Occasionally I also have to work, but I'm lucky enough to do that mostly from home.
 
 ### Working life
 
-I work in IT since 1993. After 10 years as sysadmin I switched over to be a software developer.
+I work in IT since 1993. After 10 years as sysadmin I switched over to be a freelance software developer.
 
 Most of my time as a professional developer I used C# for the backend and JavaScript for the web frontend.
 Sometimes I also needed to use Java, but only if the client required it.
