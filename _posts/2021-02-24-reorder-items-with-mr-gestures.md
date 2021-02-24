@@ -4,8 +4,6 @@ date: 2021-02-24
 classes: wide
 ---
 
-# Reorder items with MR.Gestures
-
 I'm often asked how you would use drag & drop to reorder items. The simplest solution is of course with [MR.Gestures](https://www.mrgestures.com). So it's time that I finally add a page to the [GestureSample](https://github.com/MichaelRumpler/GestureSample) which demonstrates that.
 
 In my case the items have various sizes. I want to drag them around to reorder them.
