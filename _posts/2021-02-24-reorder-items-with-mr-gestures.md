@@ -158,7 +158,7 @@ Now we create a clone of the `draggingObject`. This is the object, which we will
 				}
 			};
 
-Get position and size of the object
+Get position and size of the object. `GetAbsolutePosition` is a helper method which just adds up `X` and `Y` of the `draggingObject` and its parents.
 
 			(x, y) = GetAbsolutePosition(draggingObject);
 			w = draggingObject.Width;
@@ -180,13 +180,13 @@ The dragging gesture is started and the `clone` is in place. Now we are in the l
 		if (dragging && draggingObject != null)
 		{
 
-Change the coordinates of the clone.
+Change the coordinates of the clone. Here I use `PanEventArgs.DeltaDistance` to see, how much the touch moved since the last `Panning` event.
 
 			x += e.DeltaDistance.X;
 			y += e.DeltaDistance.Y;
 			AbsoluteLayout.SetLayoutBounds(clone, new Rectangle(x, y, w, h));
 
-Check if the child under the touch coordinates changed.
+Check if the child under the touch coordinates changed. Here again I need MR.Gestures to get the coordinate of the first finger on the screen. `GetChildAt` is a helper method which I will not list here. You'll find it in the full source code.
 
 			var newIndex = GetChildAt(e.Touches[0]);
 			if (newIndex == -1)
