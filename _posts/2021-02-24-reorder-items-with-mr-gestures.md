@@ -4,9 +4,9 @@ date: 2021-02-24
 classes: wide
 ---
 
-I'm often asked how you would use drag & drop to reorder items. The simplest solution is of course with [MR.Gestures](https://www.mrgestures.com). So it's time that I finally add a page to the [GestureSample](https://github.com/MichaelRumpler/GestureSample) which demonstrates that.
+I'm often asked how you would use drag & drop to reorder items. The simplest solution is of course with [MR.Gestures](https://www.mrgestures.com). So it's time that I finally add a page to the [GestureSample](https://github.com/MichaelRumpler/GestureSample) which demonstrates that and explain here what I did and why.
 
-In my case the items have various sizes. I want to drag them around to reorder them.
+In my case the items have various sizes. I want to react on taps and drag them around to reorder them.
 
 ## The ViewModel
 

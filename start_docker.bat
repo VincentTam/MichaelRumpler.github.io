@@ -1,4 +1,4 @@
-docker run -it --rm -p 5000:4000 -v D:\MichaelRumpler.github.io:/usr/src/app starefossen/github-pages
+docker run -it --rm -p 4000:4000 -v D:\MichaelRumpler.github.io:/usr/src/app minimal-mistakes
 pause
 
 REM to see the running docker containers (dockerId is in the first column):
