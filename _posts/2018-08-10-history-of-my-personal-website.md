@@ -64,11 +64,25 @@ Fast forward to 2018. Chrome states that http:// websites are *Not Secure*. It i
 Scott Hanselman wrote [a blog post](https://www.hanselman.com/blog/SecuringAnAzureAppServiceWebsiteUnderSSLInMinutesWithLetsEncrypt.aspx) on
 how to install such a cert on Azure websites, but although it has "in minutes" in the title the procedure seems very complicated.
 
-So here we are. I used GitHub Pages for [mrgestures.com](https://www.mrgestures.com/). And when I was on it I also created a
-new and shiny website for [mrumpler.at](https://www.mrumpler.at/). With GitHub Pages hosting is free and they also create a SSL certificate
-with Let's Encrypt automatically. They use [Jekyll](https://jekyllrb.com/) as a static site generator.
+I ended up using GitHub Pages for [mrgestures.com](https://www.mrgestures.com/). 
+With GitHub Pages hosting is free and they also create a SSL certificate with Let's Encrypt automatically.
+That was very easy because mrgestures.com is only one long page without any dynamic functionality on it.
+
+And when I was on it I also created a new and shiny website for [mrumpler.at](https://www.mrumpler.at/).
+GitHub Pages use [Jekyll](https://jekyllrb.com/) as a static site generator.
 So I can write my pages in markdown and they get converted to HTML automatically.
 It also has blogging functionality built in, so I can finally get my developers blog running.
+The problem was, that I also wanted to have comments in my blog.
 
-I will also import the data from my old travel blogs here. But I didn't do that yet and it seems as this becomes more technical so I'll write
-separate blog posts about the migrations.
+I wanted to use [Staticman](https://staticman.net/) for the comments and when I tried this the first time, Staticman just ceased to work. 
+Until 2018 [Eduardo Bouças](https://github.com/eduardoboucas) ran one public instance of Staticman which everybody could use.
+But unfortunately this instance got more and more traffic until it was over its limit of the free tier he had somewhere.
+This was exactly the time when I first tried it - and of course I failed.
+There were no workarounds at that time and once again my ambitions to run my own website faded away.
+
+It took until 2021 until I tried again because it was just not important enough for me.
+Now there was a way to get Staticman running and [mrumpler.at](https://www.mrumpler.at) became alive again at last.
+
+Now that the website is up and the blog works, I will also import the data from my old travel blogs here.
+But this is not important so it will happen when I feel like doing it - which could take some time.
+Importing those old blogs will get more technical so I'll write separate blog posts about the migrations.

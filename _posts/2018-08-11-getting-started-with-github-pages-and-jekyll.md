@@ -72,9 +72,10 @@ The docs I linked at the beginning explain how Jekyll works and how you can writ
 files so that some html is generated. But you don't need to do all that on your own.
 There are hundreds of Jekyll themes available on the internet. 
 The most important pages where you can choose a theme you like are
-[themes.jekyllrc.org](http://themes.jekyllrc.org/),
-[jekyllthemes.org](http://jekyllthemes.org/) and
-[jekyllthemes.io](https://jekyllthemes.io).
+- [themes.jekyllrc.org](http://themes.jekyllrc.org/),
+- [jekyllthemes.org](http://jekyllthemes.org/) and
+- [jekyllthemes.io](https://jekyllthemes.io).
+
 Just browse through them and see what you like. Some are simply for one page, others are for complete blogs.
 
 I went for [Minimal Mistakes](https://github.com/mmistakes/minimal-mistakes).
@@ -95,20 +96,38 @@ They create the html for the comments and they also store all the data. And in t
 they also add ads to your site. These are too many reasons against using them.
 
 Luckily Google shows several alternatives.
-[60devs](https://60devs.com/adding-comments-to-your-jekyll-blog.html) uses Just Comments,
-[Savas Labs](https://savaslabs.com/2016/04/20/squabble-comments.html) create their own backend,
-[Dave Compton](https://dc25.github.io/myBlog/2017/06/24/using-github-comments-in-a-jekyll-blog.html) uses GitHub comments
-and [Phil Haack](https://haacked.com/archive/2018/06/24/comments-for-jekyll-blogs/) uses an Azure Function
-to create a PR with the comment.
+- [60devs](https://60devs.com/adding-comments-to-your-jekyll-blog.html) uses Just Comments,
+- [Savas Labs](https://savaslabs.com/2016/04/20/squabble-comments.html) create their own backend,
+- [Dave Compton](https://dc25.github.io/myBlog/2017/06/24/using-github-comments-in-a-jekyll-blog.html) uses GitHub comments
+- and [Phil Haack](https://haacked.com/archive/2018/06/24/comments-for-jekyll-blogs/) uses an Azure Function to create a PR with the comment.
+
 All fair and square, but I wanted something where I own the data, I don't need to run an additional service,
 the users don't need to register and the comments will be published automatically.
+
+## Staticman
 
 In the comments of Phil Haacks blog post I found the first mention of [Staticman](https://staticman.net/).
 Later on I also found [Michael Rose's blog](https://mademistakes.com/articles/jekyll-static-comments/)
 which uses Staticman. This is the same Michael Rose who also wrote the Minimal Mistakes theme and 
 when I digged more into that, I found that it was already built into the theme.
 
+Unfortunately the Staticman docs are outdated. There are three versions of Staticman.
+V1 is deprecated. V2 works as documented in some other blog posts.
+V3 added support for GitLab, but it seems like it does not work anymore for GitHub.
+The way how they authenticate with GitHub with a [githubToken](https://staticman.net/docs/api#githubToken) does not work
+and it also looks like nobody got it working with [githubAppID and githubPrivateKey](https://github.com/eduardoboucas/staticman/issues/332#issuecomment-599149027).
 
+So I just downgraded to v2, then everything works. But it is important to note, that the endpoint differs between v2 and v3.
+
+V2:
+
+    endpoint: "https://<your heroku appname>.herokuapp.com/v2/entry/"
+
+V3:
+
+    endpoint: "https://<your heroku appname>.herokuapp.com/v3/entry/github/"
+
+Especially the last two links below helped me getting Staticman running at last.
 
 ## Links
 
@@ -138,3 +157,5 @@ when I digged more into that, I found that it was already built into the theme.
 - [Dave Compton - GitHub comments](https://dc25.github.io/myBlog/2017/06/24/using-github-comments-in-a-jekyll-blog.html)
 - [Michael Rose - uses Staticman](https://mademistakes.com/articles/jekyll-static-comments/)
 - [Staticman](https://staticman.net/)
+- [Staticman by Willy McAllister](https://spinningnumbers.org/a/staticman-heroku.html#try-it-out)
+- [Staticman by Travis Downs](https://travisdowns.github.io/blog/2020/02/05/now-with-comments.html)

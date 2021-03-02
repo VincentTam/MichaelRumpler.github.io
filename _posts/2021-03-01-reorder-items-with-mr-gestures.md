@@ -1,6 +1,6 @@
 ---
 title: Reorder items with MR.Gestures
-date: 2021-02-24
+date: 2021-03-01
 classes: wide
 ---
 
